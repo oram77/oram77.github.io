@@ -56,12 +56,25 @@ html {
   box-shadow: 0 0 0 30px #000 inset;
   padding: 0 30px;
 }
-h1{
+h1 {
   font-size: 7vw;
   margin-top: 0;
 }
+h2 {
+  font-size: 2em;
+}
 a {
-  color: #f00;
+  color: #6397b5;
+}
+p {
+  line-height: 1.5;
+}
+h2 ~ p {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 1em auto 0;
+  max-width: 70%;
+  text-align: center;
 }
 
 /* HEADER STYLES */
@@ -130,9 +143,9 @@ a {
   transform: translate(0, -50%);
 }
 .hero-content h1 {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 7vw;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 .hero-content .social-link {
   background-color: rgba(255, 255, 255, 0.8);
@@ -150,6 +163,10 @@ a {
   height: 100vh;
   padding-top: 10vh;
 }
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
 .full-hero:after {
   border: 10px solid;
   border-color: #fff transparent transparent;
@@ -161,17 +178,13 @@ a {
   transform: translate(-50%, 0);
   width: 0;
 }
-.hero-home {
-  background-image: url(/images/shark.jpg);
-  background-position: center top;
-}
 .footer-social {
   margin: 2em .3em 0;
 }
 
 /* HOME SECTION STYLES */
 .home-section {
-  margin: 6rem auto
+  margin: 2rem auto;
   max-width: 980px;
   width: 90vw;
 }
@@ -182,15 +195,18 @@ a {
 .home-callout {
   background-color: #000;
   color: #fff;
-  padding: 7vh 0;
+  padding: 1em 2em;
+  width: auto;
+  margin: 0 auto;
 }
 .callout-title {
-  font-size: 5.75vw;
-  text-align: right;
+  font-size: 3vw;
+  text-align: center;
   text-transform: uppercase;
 }
 .callout-copy {
   font-size: .8rem;
+  padding: 1em 2em;
 }
 
 /* SOCIAL STYLES */
@@ -232,32 +248,38 @@ a {
   max-width: 960px;
   overflow: hidden;
 }
+.bio-wrapper:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
 .bio-box {
-  border: 1px solid black;
-  border-color: black black red;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 0 2% 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 .bio-box img {
   width: 100%;
 }
 .bio-box .social-link {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 .bio-copy {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 0.75em;
 }
 .bio-copy a {
   color: green;
@@ -268,7 +290,7 @@ a {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase; 
-   color: #ffffff;
+  color: #ffffff;
 }
 .nav-links a:hover {
   color: #fd8008;
